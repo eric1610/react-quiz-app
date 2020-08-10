@@ -9,7 +9,7 @@ import {fetchQuizQuestions} from './API';
 import {QuestionState, Difficulty, Answer} from './API';
 
 // Styles
-import {Style} from './App.styles';
+import {Wrapper, Style} from './App.styles';
 
 const TOTAL_QUESTIONS = 10;
 const App = () => {
@@ -60,7 +60,7 @@ const App = () => {
   return (
     <>
       <Style />
-      <div className='App'>
+      <Wrapper>
         <h1>React Quiz</h1>
         {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
           <button className="start" onClick={startTrivia}>
@@ -88,7 +88,7 @@ const App = () => {
           </button>
         )
         }
-      </div>
+      </Wrapper>
     </>
   );
 };
